@@ -20,7 +20,10 @@
 </head>
 <body>
 <div id="cargando"><img src="https://catalogo.tecnoshopsv.com/icono-180.png" alt=""><b>CRM TecnoShopSV</b><div class="barra"><i></i></div></div>
-<iframe id="crm" title="CRM TecnoShopSV" allow="camera; clipboard-write" src="https://script.google.com/macros/s/AKfycbw4LVB9cvL2KwWoXQZ4T2WCT8TDELl7NaKc1mzehOrqy5uUl4DEqRAPHYTzm4HYXvBv/exec"
-  onload="document.getElementById('cargando').style.display='none'"></iframe>
+<iframe id="crm" title="CRM TecnoShopSV" allow="camera; clipboard-write" onload="document.getElementById('cargando').style.display='none'"></iframe>
+<script>
+  // Pasa ?orden=OR-00012 (del QR) al CRM para que abra esa orden
+  document.getElementById('crm').src = 'https://script.google.com/macros/s/AKfycbw4LVB9cvL2KwWoXQZ4T2WCT8TDELl7NaKc1mzehOrqy5uUl4DEqRAPHYTzm4HYXvBv/exec' + location.search;
+</script>
 </body>
 </html>
